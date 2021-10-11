@@ -10,7 +10,7 @@ using namespace std;
 
 void threadClient(int clientID)
 {	
-	operaciones_imp* op=new operaciones_imp(clientID);
+	filemanager_imp* op=new filemanager_imp(clientID);
 	
 	while(!op->getSalir())
 	{
