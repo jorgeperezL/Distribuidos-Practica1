@@ -13,7 +13,7 @@
 #define   OP_READFILE             	 10
 #define   OP_WRITEFILE	          	 11
 #define   OP_FREELIST		  	 12
-#define 
+
 
 class filemanager_stub{
 
