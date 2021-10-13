@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
-#include "multmatrix.h"
+#include "multmatrix_stub.h"
+#include "utils.h"
 
 
 
@@ -12,16 +13,16 @@ void freeMatrix(matrix_t* m){
 }
 int main()
 {
-    multMatrix* mmatrix=new multMatrix();
+    multmatrix_stub * mult=new multmatrix_stub();
 
 
-    matrix_t* m1= mmatrix->createRandMatrix(5,5);
-    matrix_t* m2= mmatrix->createIdentity(5,5);
-    matrix_t* mres=mmatrix->multMatrices(m1,m2);
-    mmatrix->writeMatrix(mres,"resultado.txt");
-    matrix_t* m3=mmatrix->readMatrix("resultado.txt");
-    matrix_t* mres2=mmatrix->multMatrices(m1,m3);
-    mmatrix->writeMatrix(mres2,"resultado2.txt");
+    matrix_t* m1= mult->createRandMatrix(5,5);
+    matrix_t* m2= mult->createIdentity(5,5);
+    matrix_t* mres=mult->multMatrices(m1,m2);
+    mult->writeMatrix(mres,"resultado.txt");
+    matrix_t* m3=mult->readMatrix("resultado.txt");
+    matrix_t* mres2=mult->multMatrices(m1,m3);
+    mult->writeMatrix(mres2,"resultado2.txt");
 
 
 
@@ -30,6 +31,6 @@ int main()
     freeMatrix(mres);
     freeMatrix(m3);
     freeMatrix(mres2);
-    delete mmatrix;
+    delete mult;
 
 }

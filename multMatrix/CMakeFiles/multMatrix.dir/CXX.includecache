@@ -13,28 +13,40 @@ stdlib.h
 -
 iostream
 -
-multmatrix.h
-/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/multmatrix.h
+multmatrix_stub.h
+/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/multmatrix_stub.h
+utils.h
+/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/utils.h
 
-/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/multmatrix.cpp
-multmatrix.h
-/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/multmatrix.h
-multmatrix.h
-/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/multmatrix.h
+/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/multmatrix_stub.h
+iostream
+-
 stdio.h
 -
 stdlib.h
 -
-iostream
--
-string
--
-cstring
--
+utils.h
+/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/utils.h
+
+/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/utils.h
 sys/types.h
+-
+sys/socket.h
+-
+arpa/inet.h
+-
+netinet/in.h
 -
 unistd.h
 -
-
-/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/multmatrix.h
+string.h
+-
+iostream
+-
+map
+-
+list
+-
+thread
+-
 
