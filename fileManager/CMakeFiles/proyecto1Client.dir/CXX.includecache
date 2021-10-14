@@ -30,12 +30,6 @@ dirent.h
 utils.h
 /home/mike/Documentos/PrimerCuatri/sis_distri/Distribuidos-Practica1/fileManager/utils.h
 
-/home/mike/Documentos/PrimerCuatri/sis_distri/Distribuidos-Practica1/fileManager/main_fm.cpp
-iostream
--
-filemanager_stub.h
-/home/mike/Documentos/PrimerCuatri/sis_distri/Distribuidos-Practica1/fileManager/filemanager_stub.h
-
 /home/mike/Documentos/PrimerCuatri/sis_distri/Distribuidos-Practica1/fileManager/utils.h
 sys/types.h
 -

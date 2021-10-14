@@ -17,7 +17,7 @@
 #define   OP_SALIR                 	  0
 #define   OP_READFILE             	 10
 #define   OP_WRITEFILE	          	 11
-#define   OP_FREELIST		  	 12
+#define   OP_LISTFILES		  	 12
 
 
 class filemanager_stub{

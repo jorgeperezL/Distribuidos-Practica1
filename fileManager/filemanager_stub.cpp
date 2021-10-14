@@ -35,7 +35,7 @@ void filemanager_stub::writeFile(char* fileName, char* data, int dataLength){
 	sendMSG(serverID,(void*) &operacion,sizeof(int)); //tipo operacion
 	sendMSG(serverID,(void*) fileName,sizeof(int)); //enviar nombre
 	
-	recvMSG(serverID,(void**)&data,&dataLength);  //recibe datos
+	sendMSG(serverID,(void*)&data,strlen(data)+1);  //enviar datos
 	
 	
 }
@@ -58,14 +58,38 @@ void filemanager_stub::readFile(char* fileName, char* &data, int &dataLength){
 }
 
 
-std::vector<std::string*> filemanager_stub::listFiles() {
-	std::vector<std::string*>* fileList =
+std::vector<std::string*>* filemanager_stub::listFiles() {
+
+	int operacion  = OP_LISTFILES;
+	int cantFicheros=0;
+	int tamNombre=0;
+	char* nombre= nullptr;
+	
+	std::vector<std::string*>* list = new std::vector<std::string*>();
+	
+	sendMSG(serverID,(void*) &operacion, sizeof(int)); //tipo operacion
+	recvMSG(serverID,(void**)&cantFicheros,&tamNombre); //recibe numero archivos
+	//TODO el cantFicheros, aca el error de punteros.
+	std::cout<<"El cant ficheros: "<<cantFicheros<<std::endl;
+	
+	for(int a=0;a<cantFicheros;a++) 
+	{
+		recvMSG(serverID,(void**)&nombre,&tamNombre);
+		list->push_back(new std::string(nombre));
+	}
+	
+	delete[] nombre;
+	return list;
 }
 
 
 void filemanager_stub::freeListedFiles(std::vector<std::string*>* fileList){
 
-
+	for(std::vector<std::string*>::iterator i=fileList->begin();i!= fileList->end();++i)
+	{
+        	delete *i;
+	}
+    	delete fileList;
 
 
 }

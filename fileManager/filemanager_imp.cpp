@@ -5,20 +5,15 @@
 
 #define OP_READFILE		10
 #define OP_WRITEFILE		11
-#define OP_FREELISTEDFILES	12
-#define OP_LISTFILES		13
+#define OP_LISTFILES		12
 
 
 filemanager_imp::filemanager_imp(int clientID, std::string path){
-	
-	this->path=path;
 
 	this->clientID=clientID;
 	this->salir=false;
 	
-	fm = new filemanager();
-	//TODO crear lista de ficheros en files
-	
+	fm = new FileManager(path);
 	
 }
 
@@ -48,7 +43,7 @@ void filemanager_imp::atenderOperacion()
 		{
 			case OP_SALIR:
 			{
-				salir=true;
+				this->salir=true;
 			
 			}break;
 			
@@ -57,15 +52,14 @@ void filemanager_imp::atenderOperacion()
 				//recibir nombre
 		
 				char* nombre=nullptr;
-				int fileLen=0;
+				unsigned long int fileLen=0;
 				char* fileData=nullptr;
-				char* moreData = nullptr;
 				
 				
 				recvMSG(clientID,(void**)&nombre,&dataLen);
 				
 				//leer fichero
-				fileData = fm->readFile(nombre,moreData, &fileLen)
+				fm->readFile((char*)&nombre,fileData, fileLen);
 				
 			
 				//devolver datos fichero
@@ -73,7 +67,6 @@ void filemanager_imp::atenderOperacion()
 				
 				delete nombre;
 				delete fileData;
-				delete moreData;
 			
 			}break;
 			
@@ -83,44 +76,48 @@ void filemanager_imp::atenderOperacion()
 				char* nombre=nullptr;
 				int fileLen=0;
 				char* fileData=nullptr;
-				char* moreData = nullptr;
 				
 				//recibir paquete variables 
 				recvMSG(clientID,
 					(void**)&nombre,&dataLen);
-				//escribir fichero
-				fileData = fm->writeFile(nombre,moreData,&fileLen);
+					
+				//recibe datos fichero
+				recvMSG(clientID,(void**)&fileData,&fileLen);
 				
-				//devolver datos fichero		
-				sendMSG(clientID,(void*)fileData,fileLen);
+				//escribir fichero
+				fm->writeFile(nombre,fileData,(unsigned long int)fileLen);
+				
 				
 				//TODO añadir a la lista el nuevo fichero si no existe ya
-				
+				std::cout<<"Se escribio "<<nombre<<std::endl;
 				delete nombre;
 				delete fileData;
-				delete moreData;
 			
-				
 			}break;
 			
 			case OP_LISTFILES:{
-				//pseudocodigo:
-				//sendMSG(clientID,Vector De Ficheros,fileLen);
 				
-				//delete Vector De Ficheros;
+				std::vector<std::string*> *list = fm->listFiles();
+				
+				int cantFicheros = list->size();
+				
+				//envia cantidad ficheros
+				sendMSG(clientID,&(cantFicheros),sizeof(int));
+				
+				//enviar nombres de fichero
+				for(int a=0;a<cantFicheros;a++) 
+				{
+					const char* nombre = list->at(a)->c_str();
+					sendMSG(clientID,(void*)&nombre,strlen(nombre)+1);
+				}
+				
+				fm->freeListedFiles(list);
+				
+				
 			
 			}break;//copia en el momento x de this->files
 
 			
-			case OP_FREELIST://libera un std::vector<std::string*>*
-			{
-				//vector<string*>* lista_fich;
-				
-				//fm ->freeListedFiles(lista_fich);
-				 
-			}
-			
-			break;
 			
 		}	
 	}
@@ -134,4 +131,5 @@ void filemanager_imp::atenderOperacion()
 filemanager_imp::~filemanager_imp()
 {
 	closeConnection(clientID);
+	delete fm;
 }

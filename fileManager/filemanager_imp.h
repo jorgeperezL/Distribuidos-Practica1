@@ -13,9 +13,7 @@ class filemanager_imp
 private:
 	int clientID=-1;
 	bool salir=false;
-	filemanager* fm=nullptr;
-	
-	this->path=path;
+	FileManager* fm=nullptr;
 	std::map<std::string, std::string* > files;
 public:
 	filemanager_imp(int clientID,std::string path);
