@@ -14,9 +14,11 @@ private:
 	int clientID=-1;
 	bool salir=false;
 	filemanager* fm=nullptr;
-
+	
+	this->path=path;
+	std::map<std::string, std::string* > files;
 public:
-	filemanager_imp(int clientID);
+	filemanager_imp(int clientID,std::string path);
 	~filemanager_imp();
 	bool getSalir(){return salir;};
 	void atenderOperacion();

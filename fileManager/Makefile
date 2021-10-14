@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/fileManager"
+CMAKE_SOURCE_DIR = /home/mike/Documentos/PrimerCuatri/sis_distri/Distribuidos-Practica1/fileManager
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/fileManager"
+CMAKE_BINARY_DIR = /home/mike/Documentos/PrimerCuatri/sis_distri/Distribuidos-Practica1/fileManager
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/fileManager/CMakeFiles" "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/fileManager/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mike/Documentos/PrimerCuatri/sis_distri/Distribuidos-Practica1/fileManager/CMakeFiles /home/mike/Documentos/PrimerCuatri/sis_distri/Distribuidos-Practica1/fileManager/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/fileManager/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mike/Documentos/PrimerCuatri/sis_distri/Distribuidos-Practica1/fileManager/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named fileManager
+# Target rules for targets named proyecto1Client
 
 # Build rule for target.
-fileManager: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 fileManager
-.PHONY : fileManager
+proyecto1Client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 proyecto1Client
+.PHONY : proyecto1Client
 
 # fast build rule for target.
-fileManager/fast:
-	$(MAKE) -f CMakeFiles/fileManager.dir/build.make CMakeFiles/fileManager.dir/build
-.PHONY : fileManager/fast
+proyecto1Client/fast:
+	$(MAKE) -f CMakeFiles/proyecto1Client.dir/build.make CMakeFiles/proyecto1Client.dir/build
+.PHONY : proyecto1Client/fast
+
+#=============================================================================
+# Target rules for targets named proyecto1Server
+
+# Build rule for target.
+proyecto1Server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 proyecto1Server
+.PHONY : proyecto1Server
+
+# fast build rule for target.
+proyecto1Server/fast:
+	$(MAKE) -f CMakeFiles/proyecto1Server.dir/build.make CMakeFiles/proyecto1Server.dir/build
+.PHONY : proyecto1Server/fast
 
 filemanager.o: filemanager.cpp.o
 
@@ -129,7 +142,7 @@ filemanager.o: filemanager.cpp.o
 
 # target to build an object file
 filemanager.cpp.o:
-	$(MAKE) -f CMakeFiles/fileManager.dir/build.make CMakeFiles/fileManager.dir/filemanager.cpp.o
+	$(MAKE) -f CMakeFiles/proyecto1Server.dir/build.make CMakeFiles/proyecto1Server.dir/filemanager.cpp.o
 .PHONY : filemanager.cpp.o
 
 filemanager.i: filemanager.cpp.i
@@ -138,7 +151,7 @@ filemanager.i: filemanager.cpp.i
 
 # target to preprocess a source file
 filemanager.cpp.i:
-	$(MAKE) -f CMakeFiles/fileManager.dir/build.make CMakeFiles/fileManager.dir/filemanager.cpp.i
+	$(MAKE) -f CMakeFiles/proyecto1Server.dir/build.make CMakeFiles/proyecto1Server.dir/filemanager.cpp.i
 .PHONY : filemanager.cpp.i
 
 filemanager.s: filemanager.cpp.s
@@ -147,8 +160,62 @@ filemanager.s: filemanager.cpp.s
 
 # target to generate assembly for a file
 filemanager.cpp.s:
-	$(MAKE) -f CMakeFiles/fileManager.dir/build.make CMakeFiles/fileManager.dir/filemanager.cpp.s
+	$(MAKE) -f CMakeFiles/proyecto1Server.dir/build.make CMakeFiles/proyecto1Server.dir/filemanager.cpp.s
 .PHONY : filemanager.cpp.s
+
+filemanager_imp.o: filemanager_imp.cpp.o
+
+.PHONY : filemanager_imp.o
+
+# target to build an object file
+filemanager_imp.cpp.o:
+	$(MAKE) -f CMakeFiles/proyecto1Server.dir/build.make CMakeFiles/proyecto1Server.dir/filemanager_imp.cpp.o
+.PHONY : filemanager_imp.cpp.o
+
+filemanager_imp.i: filemanager_imp.cpp.i
+
+.PHONY : filemanager_imp.i
+
+# target to preprocess a source file
+filemanager_imp.cpp.i:
+	$(MAKE) -f CMakeFiles/proyecto1Server.dir/build.make CMakeFiles/proyecto1Server.dir/filemanager_imp.cpp.i
+.PHONY : filemanager_imp.cpp.i
+
+filemanager_imp.s: filemanager_imp.cpp.s
+
+.PHONY : filemanager_imp.s
+
+# target to generate assembly for a file
+filemanager_imp.cpp.s:
+	$(MAKE) -f CMakeFiles/proyecto1Server.dir/build.make CMakeFiles/proyecto1Server.dir/filemanager_imp.cpp.s
+.PHONY : filemanager_imp.cpp.s
+
+filemanager_stub.o: filemanager_stub.cpp.o
+
+.PHONY : filemanager_stub.o
+
+# target to build an object file
+filemanager_stub.cpp.o:
+	$(MAKE) -f CMakeFiles/proyecto1Client.dir/build.make CMakeFiles/proyecto1Client.dir/filemanager_stub.cpp.o
+.PHONY : filemanager_stub.cpp.o
+
+filemanager_stub.i: filemanager_stub.cpp.i
+
+.PHONY : filemanager_stub.i
+
+# target to preprocess a source file
+filemanager_stub.cpp.i:
+	$(MAKE) -f CMakeFiles/proyecto1Client.dir/build.make CMakeFiles/proyecto1Client.dir/filemanager_stub.cpp.i
+.PHONY : filemanager_stub.cpp.i
+
+filemanager_stub.s: filemanager_stub.cpp.s
+
+.PHONY : filemanager_stub.s
+
+# target to generate assembly for a file
+filemanager_stub.cpp.s:
+	$(MAKE) -f CMakeFiles/proyecto1Client.dir/build.make CMakeFiles/proyecto1Client.dir/filemanager_stub.cpp.s
+.PHONY : filemanager_stub.cpp.s
 
 main_fm.o: main_fm.cpp.o
 
@@ -156,7 +223,7 @@ main_fm.o: main_fm.cpp.o
 
 # target to build an object file
 main_fm.cpp.o:
-	$(MAKE) -f CMakeFiles/fileManager.dir/build.make CMakeFiles/fileManager.dir/main_fm.cpp.o
+	$(MAKE) -f CMakeFiles/proyecto1Client.dir/build.make CMakeFiles/proyecto1Client.dir/main_fm.cpp.o
 .PHONY : main_fm.cpp.o
 
 main_fm.i: main_fm.cpp.i
@@ -165,7 +232,7 @@ main_fm.i: main_fm.cpp.i
 
 # target to preprocess a source file
 main_fm.cpp.i:
-	$(MAKE) -f CMakeFiles/fileManager.dir/build.make CMakeFiles/fileManager.dir/main_fm.cpp.i
+	$(MAKE) -f CMakeFiles/proyecto1Client.dir/build.make CMakeFiles/proyecto1Client.dir/main_fm.cpp.i
 .PHONY : main_fm.cpp.i
 
 main_fm.s: main_fm.cpp.s
@@ -174,8 +241,65 @@ main_fm.s: main_fm.cpp.s
 
 # target to generate assembly for a file
 main_fm.cpp.s:
-	$(MAKE) -f CMakeFiles/fileManager.dir/build.make CMakeFiles/fileManager.dir/main_fm.cpp.s
+	$(MAKE) -f CMakeFiles/proyecto1Client.dir/build.make CMakeFiles/proyecto1Client.dir/main_fm.cpp.s
 .PHONY : main_fm.cpp.s
+
+serverMain.o: serverMain.cpp.o
+
+.PHONY : serverMain.o
+
+# target to build an object file
+serverMain.cpp.o:
+	$(MAKE) -f CMakeFiles/proyecto1Server.dir/build.make CMakeFiles/proyecto1Server.dir/serverMain.cpp.o
+.PHONY : serverMain.cpp.o
+
+serverMain.i: serverMain.cpp.i
+
+.PHONY : serverMain.i
+
+# target to preprocess a source file
+serverMain.cpp.i:
+	$(MAKE) -f CMakeFiles/proyecto1Server.dir/build.make CMakeFiles/proyecto1Server.dir/serverMain.cpp.i
+.PHONY : serverMain.cpp.i
+
+serverMain.s: serverMain.cpp.s
+
+.PHONY : serverMain.s
+
+# target to generate assembly for a file
+serverMain.cpp.s:
+	$(MAKE) -f CMakeFiles/proyecto1Server.dir/build.make CMakeFiles/proyecto1Server.dir/serverMain.cpp.s
+.PHONY : serverMain.cpp.s
+
+utils.o: utils.cpp.o
+
+.PHONY : utils.o
+
+# target to build an object file
+utils.cpp.o:
+	$(MAKE) -f CMakeFiles/proyecto1Client.dir/build.make CMakeFiles/proyecto1Client.dir/utils.cpp.o
+	$(MAKE) -f CMakeFiles/proyecto1Server.dir/build.make CMakeFiles/proyecto1Server.dir/utils.cpp.o
+.PHONY : utils.cpp.o
+
+utils.i: utils.cpp.i
+
+.PHONY : utils.i
+
+# target to preprocess a source file
+utils.cpp.i:
+	$(MAKE) -f CMakeFiles/proyecto1Client.dir/build.make CMakeFiles/proyecto1Client.dir/utils.cpp.i
+	$(MAKE) -f CMakeFiles/proyecto1Server.dir/build.make CMakeFiles/proyecto1Server.dir/utils.cpp.i
+.PHONY : utils.cpp.i
+
+utils.s: utils.cpp.s
+
+.PHONY : utils.s
+
+# target to generate assembly for a file
+utils.cpp.s:
+	$(MAKE) -f CMakeFiles/proyecto1Client.dir/build.make CMakeFiles/proyecto1Client.dir/utils.cpp.s
+	$(MAKE) -f CMakeFiles/proyecto1Server.dir/build.make CMakeFiles/proyecto1Server.dir/utils.cpp.s
+.PHONY : utils.cpp.s
 
 # Help Target
 help:
@@ -185,13 +309,26 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... fileManager"
+	@echo "... proyecto1Client"
+	@echo "... proyecto1Server"
 	@echo "... filemanager.o"
 	@echo "... filemanager.i"
 	@echo "... filemanager.s"
+	@echo "... filemanager_imp.o"
+	@echo "... filemanager_imp.i"
+	@echo "... filemanager_imp.s"
+	@echo "... filemanager_stub.o"
+	@echo "... filemanager_stub.i"
+	@echo "... filemanager_stub.s"
 	@echo "... main_fm.o"
 	@echo "... main_fm.i"
 	@echo "... main_fm.s"
+	@echo "... serverMain.o"
+	@echo "... serverMain.i"
+	@echo "... serverMain.s"
+	@echo "... utils.o"
+	@echo "... utils.i"
+	@echo "... utils.s"
 .PHONY : help
 
 

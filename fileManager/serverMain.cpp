@@ -8,9 +8,11 @@
 
 using namespace std;
 
+extern const string path = "./dirprueba/";
+
 void threadClient(int clientID)
 {	
-	filemanager_imp* op=new filemanager_imp(clientID);
+	filemanager_imp* op=new filemanager_imp(clientID,path);
 	
 	while(!op->getSalir())
 	{
@@ -25,7 +27,6 @@ int main(int argc,char** argv)
 {
 	//iniciar servidor
 	int socketID=initServer(SERVER_PORT);
-	
 	while(true)
 	{	//bucle conexiones clientes
 		if(checkNewConnections()) //si hay nueva conexion

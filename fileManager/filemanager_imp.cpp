@@ -9,12 +9,16 @@
 #define OP_LISTFILES		13
 
 
-filemanager_imp::filemanager_imp(int clientID){
+filemanager_imp::filemanager_imp(int clientID, std::string path){
+	
+	this->path=path;
 
 	this->clientID=clientID;
 	this->salir=false;
 	
 	fm = new filemanager();
+	//TODO crear lista de ficheros en files
+	
 	
 }
 
@@ -90,6 +94,8 @@ void filemanager_imp::atenderOperacion()
 				//devolver datos fichero		
 				sendMSG(clientID,(void*)fileData,fileLen);
 				
+				//TODO añadir a la lista el nuevo fichero si no existe ya
+				
 				delete nombre;
 				delete fileData;
 				delete moreData;
@@ -97,11 +103,20 @@ void filemanager_imp::atenderOperacion()
 				
 			}break;
 			
-			case OP_FREELIST:
-			{
-				vector<string*>* lista_fich;
+			case OP_LISTFILES:{
+				//pseudocodigo:
+				//sendMSG(clientID,Vector De Ficheros,fileLen);
 				
-				fm ->freeListedFiles(lista_fich);
+				//delete Vector De Ficheros;
+			
+			}break;//copia en el momento x de this->files
+
+			
+			case OP_FREELIST://libera un std::vector<std::string*>*
+			{
+				//vector<string*>* lista_fich;
+				
+				//fm ->freeListedFiles(lista_fich);
 				 
 			}
 			

@@ -44,16 +44,17 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/fileManager"
+CMAKE_SOURCE_DIR = /home/mike/Documentos/PrimerCuatri/sis_distri/Distribuidos-Practica1/fileManager
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/fileManager"
+CMAKE_BINARY_DIR = /home/mike/Documentos/PrimerCuatri/sis_distri/Distribuidos-Practica1/fileManager
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/fileManager.dir/all
+all: CMakeFiles/proyecto1Client.dir/all
+all: CMakeFiles/proyecto1Server.dir/all
 
 .PHONY : all
 
@@ -63,36 +64,64 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/fileManager.dir/clean
+clean: CMakeFiles/proyecto1Client.dir/clean
+clean: CMakeFiles/proyecto1Server.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/fileManager.dir
+# Target rules for target CMakeFiles/proyecto1Client.dir
 
 # All Build rule for target.
-CMakeFiles/fileManager.dir/all:
-	$(MAKE) -f CMakeFiles/fileManager.dir/build.make CMakeFiles/fileManager.dir/depend
-	$(MAKE) -f CMakeFiles/fileManager.dir/build.make CMakeFiles/fileManager.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/fileManager/CMakeFiles" --progress-num=1,2,3 "Built target fileManager"
-.PHONY : CMakeFiles/fileManager.dir/all
+CMakeFiles/proyecto1Client.dir/all:
+	$(MAKE) -f CMakeFiles/proyecto1Client.dir/build.make CMakeFiles/proyecto1Client.dir/depend
+	$(MAKE) -f CMakeFiles/proyecto1Client.dir/build.make CMakeFiles/proyecto1Client.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mike/Documentos/PrimerCuatri/sis_distri/Distribuidos-Practica1/fileManager/CMakeFiles --progress-num=1,2,3,4 "Built target proyecto1Client"
+.PHONY : CMakeFiles/proyecto1Client.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/fileManager.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/fileManager/CMakeFiles" 3
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/fileManager.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/fileManager/CMakeFiles" 0
-.PHONY : CMakeFiles/fileManager.dir/rule
+CMakeFiles/proyecto1Client.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mike/Documentos/PrimerCuatri/sis_distri/Distribuidos-Practica1/fileManager/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/proyecto1Client.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mike/Documentos/PrimerCuatri/sis_distri/Distribuidos-Practica1/fileManager/CMakeFiles 0
+.PHONY : CMakeFiles/proyecto1Client.dir/rule
 
 # Convenience name for target.
-fileManager: CMakeFiles/fileManager.dir/rule
+proyecto1Client: CMakeFiles/proyecto1Client.dir/rule
 
-.PHONY : fileManager
+.PHONY : proyecto1Client
 
 # clean rule for target.
-CMakeFiles/fileManager.dir/clean:
-	$(MAKE) -f CMakeFiles/fileManager.dir/build.make CMakeFiles/fileManager.dir/clean
-.PHONY : CMakeFiles/fileManager.dir/clean
+CMakeFiles/proyecto1Client.dir/clean:
+	$(MAKE) -f CMakeFiles/proyecto1Client.dir/build.make CMakeFiles/proyecto1Client.dir/clean
+.PHONY : CMakeFiles/proyecto1Client.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/proyecto1Server.dir
+
+# All Build rule for target.
+CMakeFiles/proyecto1Server.dir/all:
+	$(MAKE) -f CMakeFiles/proyecto1Server.dir/build.make CMakeFiles/proyecto1Server.dir/depend
+	$(MAKE) -f CMakeFiles/proyecto1Server.dir/build.make CMakeFiles/proyecto1Server.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mike/Documentos/PrimerCuatri/sis_distri/Distribuidos-Practica1/fileManager/CMakeFiles --progress-num=5,6,7,8,9 "Built target proyecto1Server"
+.PHONY : CMakeFiles/proyecto1Server.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/proyecto1Server.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mike/Documentos/PrimerCuatri/sis_distri/Distribuidos-Practica1/fileManager/CMakeFiles 5
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/proyecto1Server.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mike/Documentos/PrimerCuatri/sis_distri/Distribuidos-Practica1/fileManager/CMakeFiles 0
+.PHONY : CMakeFiles/proyecto1Server.dir/rule
+
+# Convenience name for target.
+proyecto1Server: CMakeFiles/proyecto1Server.dir/rule
+
+.PHONY : proyecto1Server
+
+# clean rule for target.
+CMakeFiles/proyecto1Server.dir/clean:
+	$(MAKE) -f CMakeFiles/proyecto1Server.dir/build.make CMakeFiles/proyecto1Server.dir/clean
+.PHONY : CMakeFiles/proyecto1Server.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

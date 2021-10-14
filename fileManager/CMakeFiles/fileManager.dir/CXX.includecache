@@ -6,11 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/fileManager/filemanager.cpp
-filemanager.h
-/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/fileManager/filemanager.h
-
-/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/fileManager/filemanager.h
+/home/mike/Documentos/PrimerCuatri/sis_distri/Distribuidos-Practica1/fileManager/filemanager.h
 iostream
 -
 stdio.h
@@ -26,9 +22,7 @@ vector
 dirent.h
 -
 
-/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/fileManager/main_fm.cpp
-iostream
--
+/home/mike/Documentos/PrimerCuatri/sis_distri/Distribuidos-Practica1/fileManager/main_fm.cpp
 filemanager.h
-/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/fileManager/filemanager.h
+/home/mike/Documentos/PrimerCuatri/sis_distri/Distribuidos-Practica1/fileManager/filemanager.h
 
