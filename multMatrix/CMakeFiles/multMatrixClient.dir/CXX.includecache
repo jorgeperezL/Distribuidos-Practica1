@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/main_multMatrix.cpp
+stdio.h
+-
+stdlib.h
+-
+iostream
+-
+multmatrix_stub.h
+/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/multmatrix_stub.h
+utils.h
+/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/utils.h
+
 /home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/multmatrix_stub.cpp
 multmatrix_stub.h
 /home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/multmatrix_stub.h
@@ -19,6 +31,10 @@ stdlib.h
 -
 string.h
 -
+utils.h
+/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/utils.h
+
+/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/utils.cpp
 utils.h
 /home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/utils.h
 

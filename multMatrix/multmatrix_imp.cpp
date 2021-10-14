@@ -15,7 +15,7 @@ multmatrix_imp::multmatrix_imp(int clientID)
 	this->clientID=clientID;
 	this->salir=false;
 	
-	mult=new multmatrix();
+	mult=new multMatrix();
 }
 
 
@@ -56,16 +56,16 @@ void multmatrix_imp::atenderOperacion()
 
 				recvMSG(clientID,(void**)&nombre,&dataLen);
 				
-				matrix_t* m=mult->readMatrix(nombre+".txt");
+				matrix_t *m=mult->readMatrix(nombre);
 				
 				
-				datos = new char[sizeof(int)*((m.rows*m.cols)+2));
-				memcpy(datos,&m.rows,sizeof(int));
-				memcpy(&datos[sizeof(int)],&m.cols,sizeof(int));
-				memcpy(&datos[sizeof(int)*2],m->data,sizeof(int)*(m.rows*m.cols));
+				datos = new char[sizeof(int)*((m->rows*m->cols)+2)];
+				memcpy(datos,&m->rows,sizeof(int));
+				memcpy(&datos[sizeof(int)],&m->cols,sizeof(int));
+				memcpy(&datos[sizeof(int)*2],m->data,sizeof(int)*(m->rows*m->cols));
 				
 				//devolver resultado
-				sendMSG(clientID,(void*)datos,sizeof(int)*((m.rows*m.cols)+2));
+				sendMSG(clientID,(void*)datos,sizeof(int)*((m->rows*m->cols)+2));
 				
 				delete datos;
 				delete nombre;
@@ -74,22 +74,22 @@ void multmatrix_imp::atenderOperacion()
 			
 			case OP_MULTMATRICES:{
 			
-				matrix_t* m1 = new matrix_t();
-				matrix_t* m2 = new matrix_t();
+				matrix_t * m1 = new matrix_t();
+				matrix_t * m2 = new matrix_t();
 				
 				recvMSG(clientID,(void**)&datos,&dataLen);
 				
-				m1.rows = (int*)datos;
-				m1.cols = (int*)&datos[sizeof(int)];
-				m1->data = (int**)&datos[sizeof(int)*2];		
+				m1->rows = atoi(datos);
+				m1->cols = atoi(&datos[sizeof(int)]);
+				m1->data = (int*)&datos[sizeof(int)*2];		
 				
 				delete datos;
 				
 				recvMSG(clientID,(void**)&datos,&dataLen);
 				
-				m2.rows = (int*)datos;
-				m2.cols = (int*)&datos[sizeof(int)];
-				m2->data = (int**)&datos[sizeof(int)*2];
+				m2->rows = atoi(datos);
+				m2->cols = atoi(&datos[sizeof(int)]);
+				m2->data = (int*)&datos[sizeof(int)*2];
 				
 				delete datos;
 				
@@ -98,13 +98,13 @@ void multmatrix_imp::atenderOperacion()
 				delete m1;
 				delete m2;
 				
-				datos = new char[sizeof(int)*((mres.rows*mres.cols)+2));
-				memcpy(datos,&mres.rows,sizeof(int));
-				memcpy(&datos[sizeof(int)],&mres.cols,sizeof(int));
-				memcpy(&datos[sizeof(int)*2],mres->data,sizeof(int)*(mres.rows*mres.cols));
+				datos = new char[sizeof(int)*((mres->rows*mres->cols)+2)];
+				memcpy(datos,&mres->rows,sizeof(int));
+				memcpy(&datos[sizeof(int)],&mres->cols,sizeof(int));
+				memcpy(&datos[sizeof(int)*2],mres->data,sizeof(int)*(mres->rows*mres->cols));
 				
 				//devolver resultado
-				sendMSG(clientID,(void*)datos,sizeof(int)*((mres.rows*mres.cols)+2));
+				sendMSG(clientID,(void*)datos,sizeof(int)*((mres->rows*mres->cols)+2));
 				
 				delete datos;
 				
@@ -112,18 +112,18 @@ void multmatrix_imp::atenderOperacion()
 			
 			case OP_WRITEMATRIX:
 			{
-				matrix_t* m = new matrix_t();
+				matrix_t *m = new matrix_t();
 				char* nombre=nullptr;
 				
 				recvMSG(clientID,(void**)&datos,&dataLen);
 				
-				m.rows = (int*)datos;
-				m.cols = (int*)&datos[sizeof(int)];
-				m->data = (int**)&datos[sizeof(int)*2];
+				m->rows = atoi(datos);
+				m->cols = atoi(&datos[sizeof(int)]);
+				m->data = (int*)&datos[sizeof(int)*2];
 						
 				recvMSG(clientID,(void**)&nombre,&dataLen);
 		
-				mult->writeMatrix(m,nombre+".txt");
+				mult->writeMatrix(m,nombre);
 				
 				delete nombre;
 				delete datos;
@@ -137,22 +137,22 @@ void multmatrix_imp::atenderOperacion()
 				int rows=0,cols=0;
 					
 				recvMSG(clientID,(void**)&datos,&dataLen);
-				memcpy(&a,datos, sizeof(int));
+				memcpy(&rows,datos, sizeof(int));
 				delete datos;
 				
 				recvMSG(clientID,(void**)&datos,&dataLen);
-				memcpy(&b,datos, sizeof(int));
+				memcpy(&cols,datos, sizeof(int));
 				delete datos;
 				
     				matrix_t* m= mult->createIdentity(rows,cols);
     				
-    				datos = new char[sizeof(int)*((m.rows*m.cols)+2));
-				memcpy(datos,&m.rows,sizeof(int));
-				memcpy(&datos[sizeof(int)],&m.cols,sizeof(int));
-				memcpy(&datos[sizeof(int)*2],m->data,sizeof(int)*(m.rows*m.cols));
+    				datos = new char[sizeof(int)*((m->rows*m->cols)+2)];
+				memcpy(datos,&m->rows,sizeof(int));
+				memcpy(&datos[sizeof(int)],&m->cols,sizeof(int));
+				memcpy(&datos[sizeof(int)*2],m->data,sizeof(int)*(m->rows*m->cols));
 				
 				//devolver resultado
-				sendMSG(clientID,(void*)datos,sizeof(int)*((m.rows*m.cols)+2));
+				sendMSG(clientID,(void*)datos,sizeof(int)*((m->rows*m->cols)+2));
 				
 				delete datos;
 			}
@@ -173,13 +173,13 @@ void multmatrix_imp::atenderOperacion()
 					
 				matrix_t* m= mult->createRandMatrix(rows,cols);
 				
-				datos = new char[sizeof(int)*((m.rows*m.cols)+2));
-				memcpy(datos,&m.rows,sizeof(int));
-				memcpy(&datos[sizeof(int)],&m.cols,sizeof(int));
-				memcpy(&datos[sizeof(int)*2],m->data,sizeof(int)*(m.rows*m.cols));
+				datos = new char[sizeof(int)*((m->rows*m->cols)+2)];
+				memcpy(datos,&m->rows,sizeof(int));
+				memcpy(&datos[sizeof(int)],&m->cols,sizeof(int));
+				memcpy(&datos[sizeof(int)*2],m->data,sizeof(int)*(m->rows*m->cols));
 				
 				//devolver resultado
-				sendMSG(clientID,(void*)datos,sizeof(int)*((m.rows*m.cols)+2));
+				sendMSG(clientID,(void*)datos,sizeof(int)*((m->rows*m->cols)+2));
 				
 				delete datos;				
 			}

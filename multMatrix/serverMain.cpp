@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "utils.h"
-#include "operaciones_imp.h"
+#include "multmatrix_imp.h"
 
 #define SERVER_PORT 65000
 
@@ -10,7 +10,7 @@ using namespace std;
 
 void threadClient(int clientID)
 {	
-	operaciones_imp* op=new operaciones_imp(clientID);
+	multmatrix_imp* op=new multmatrix_imp(clientID);
 	
 	while(!op->getSalir())
 	{

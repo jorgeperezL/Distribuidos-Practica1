@@ -3,6 +3,7 @@
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "utils.h"
 #include "multmatrix.h"
 
@@ -13,7 +14,7 @@ class multmatrix_imp
 private:
 	int clientID=-1;
 	bool salir=false;
-	multmatrix* mult=nullptr;
+	multMatrix* mult=nullptr;
 
 public:
 	multmatrix_imp(int clientID);

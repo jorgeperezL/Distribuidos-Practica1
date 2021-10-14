@@ -6,6 +6,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/main_multMatrix.cpp" "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/CMakeFiles/multMatrix.dir/main_multMatrix.cpp.o"
   "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/multmatrix.cpp" "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/CMakeFiles/multMatrix.dir/multmatrix.cpp.o"
+  "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/multmatrix_imp.cpp" "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/CMakeFiles/multMatrix.dir/multmatrix_imp.cpp.o"
+  "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/multmatrix_stub.cpp" "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/CMakeFiles/multMatrix.dir/multmatrix_stub.cpp.o"
+  "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/serverMain.cpp" "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/CMakeFiles/multMatrix.dir/serverMain.cpp.o"
+  "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/utils.cpp" "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/CMakeFiles/multMatrix.dir/utils.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

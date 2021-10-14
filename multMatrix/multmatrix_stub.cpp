@@ -34,14 +34,14 @@ matrix_t * multmatrix_stub::readMatrix(const char* fileName){
 				
 	//recibir resultado
 	
-	recvMSG(clientID,(void**)&datos,&dataLen);
+	recvMSG(serverID,(void**)&datos,&dataLen);
 				
-	m.rows = (int*)datos;
-	m.cols = (int*)&datos[sizeof(int)];
-	m->data = (int**)&datos[sizeof(int)*2];
+	m->rows = atoi(datos);
+	m->cols = atoi(&datos[sizeof(int)]);
+	m->data = (int*)&datos[sizeof(int)*2];
 	
 	delete datos;
-			s	
+				
 	return m;
 }
 
@@ -59,28 +59,28 @@ matrix_t * multmatrix_stub::multMatrices(matrix_t* m1, matrix_t *m2){
 
 //enviar datos
 	//crear paquete datos
-	datos = new char[sizeof(int)*((m1.rows*m1.cols)+2));
-	memcpy(datos,&m1.rows,sizeof(int));
-	memcpy(&datos[sizeof(int)],&m1.cols,sizeof(int));
-	memcpy(&datos[sizeof(int)*2],m1->data,sizeof(int)*(m1.rows*m1.cols));
+	datos = new char[sizeof(int)*((m1->rows*m1->cols)+2)];
+	memcpy(datos,&m1->rows,sizeof(int));
+	memcpy(&datos[sizeof(int)],&m1->cols,sizeof(int));
+	memcpy(&datos[sizeof(int)*2],m1->data,sizeof(int)*(m1->rows*m1->cols));
 	//enviar
-	sendMSG(clientID,(void*)datos,sizeof(int)*((m1.rows*m1.cols)+2));
+	sendMSG(serverID,(void*)datos,sizeof(int)*((m1->rows*m1->cols)+2));
 	delete datos;
 //enviar datos
 	//crear paquete datos
-	datos = new char[sizeof(int)*((m2.rows*m2.cols)+2));
-	memcpy(datos,&m2.rows,sizeof(int));
-	memcpy(&datos[sizeof(int)],&m2.cols,sizeof(int));
-	memcpy(&datos[sizeof(int)*2],m2->data,sizeof(int)*(m2.rows*m2.cols));
+	datos = new char[sizeof(int)*((m2->rows*m2->cols)+2)];
+	memcpy(datos,&m2->rows,sizeof(int));
+	memcpy(&datos[sizeof(int)],&m2->cols,sizeof(int));
+	memcpy(&datos[sizeof(int)*2],m2->data,sizeof(int)*(m2->rows*m2->cols));
 	//enviar
-	sendMSG(clientID,(void*)datos,sizeof(int)*((m2.rows*m2.cols)+2));
+	sendMSG(serverID,(void*)datos,sizeof(int)*((m2->rows*m2->cols)+2));
 	delete datos;
 //recibir resultado
-	recvMSG(clientID,(void**)&datos,&dataLen);
+	recvMSG(serverID,(void**)&datos,&dataLen);
 				
-	mres.rows = (int*)datos;
-	mres.cols = (int*)&datos[sizeof(int)];
-	mres->data = (int**)&datos[sizeof(int)*2];		
+	mres->rows = atoi(datos);
+	mres->cols = atoi(&datos[sizeof(int)]);
+	mres->data = (int*)&datos[sizeof(int)*2];		
 				
 	delete datos;
 	
@@ -100,12 +100,12 @@ void multmatrix_stub::writeMatrix(matrix_t* m, const char *fileName)
 	//enviar nombre
 	sendMSG(serverID,(void*)fileName,strlen(fileName)+1);
 	
-	datos = new char[sizeof(int)*((m.rows*m.cols)+2));
-	memcpy(datos,&m.rows,sizeof(int));
-	memcpy(&datos[sizeof(int)],&m.cols,sizeof(int));
-	memcpy(&datos[sizeof(int)*2],m->data,sizeof(int)*(m.rows*m.cols));
+	datos = new char[sizeof(int)*((m->rows*m->cols)+2)];
+	memcpy(datos,&m->rows,sizeof(int));
+	memcpy(&datos[sizeof(int)],&m->cols,sizeof(int));
+	memcpy(&datos[sizeof(int)*2],m->data,sizeof(int)*(m->rows*m->cols));
 	//enviar
-	sendMSG(clientID,(void*)datos,sizeof(int)*((m1.rows*m1.cols)+2));
+	sendMSG(serverID,(void*)datos,sizeof(int)*((m->rows*m->cols)+2));
 	delete datos;
 }
 
@@ -114,6 +114,7 @@ matrix_t* multmatrix_stub::createIdentity(int rows, int cols){
 
 	int operacion=OP_CREATEIDENTITY;
 	char* datos=nullptr;
+	int dataLen=0;
 	matrix_t* mres = new matrix_t();
 	
 //enviar tipo operacion
@@ -124,11 +125,11 @@ matrix_t* multmatrix_stub::createIdentity(int rows, int cols){
 	sendMSG(serverID,(void*)&cols,sizeof(int));
 	
 	//recibir resultado
-	recvMSG(clientID,(void**)&datos,&dataLen);
+	recvMSG(serverID,(void**)&datos,&dataLen);
 				
-	mres.rows = (int*)datos;
-	mres.cols = (int*)&datos[sizeof(int)];
-	mres->data = (int**)&datos[sizeof(int)*2];		
+	mres->rows = atoi(datos);
+	mres->cols = atoi(&datos[sizeof(int)]);
+	mres->data = (int*)&datos[sizeof(int)*2];		
 				
 	delete datos;
 	
@@ -139,6 +140,7 @@ matrix_t* multmatrix_stub::createIdentity(int rows, int cols){
 matrix_t * multmatrix_stub::createRandMatrix(int rows, int cols){
 	int operacion=OP_CREATERANDMATRIX;
 	char* datos=nullptr;
+	int dataLen=0;
 	matrix_t* mres = new matrix_t();
 	
 //enviar tipo operacion
@@ -149,11 +151,11 @@ matrix_t * multmatrix_stub::createRandMatrix(int rows, int cols){
 	sendMSG(serverID,(void*)&cols,sizeof(int));
 	
 	//recibir resultado
-	recvMSG(clientID,(void**)&datos,&dataLen);
+	recvMSG(serverID,(void**)&datos,&dataLen);
 				
-	mres.rows = (int*)datos;
-	mres.cols = (int*)&datos[sizeof(int)];
-	mres->data = (int**)&datos[sizeof(int)*2];		
+	mres->rows = atoi(datos);
+	mres->cols = atoi(&datos[sizeof(int)]);
+	mres->data = (int*)&datos[sizeof(int)*2];		
 				
 	delete datos;
 	

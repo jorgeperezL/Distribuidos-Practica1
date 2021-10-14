@@ -57,18 +57,18 @@ include CMakeFiles/multMatrix.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/multMatrix.dir/flags.make
 
-CMakeFiles/multMatrix.dir/main_multMatrix.cpp.o: CMakeFiles/multMatrix.dir/flags.make
-CMakeFiles/multMatrix.dir/main_multMatrix.cpp.o: main_multMatrix.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/multMatrix.dir/main_multMatrix.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/multMatrix.dir/main_multMatrix.cpp.o -c "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/main_multMatrix.cpp"
+CMakeFiles/multMatrix.dir/serverMain.cpp.o: CMakeFiles/multMatrix.dir/flags.make
+CMakeFiles/multMatrix.dir/serverMain.cpp.o: serverMain.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/multMatrix.dir/serverMain.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/multMatrix.dir/serverMain.cpp.o -c "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/serverMain.cpp"
 
-CMakeFiles/multMatrix.dir/main_multMatrix.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/multMatrix.dir/main_multMatrix.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/main_multMatrix.cpp" > CMakeFiles/multMatrix.dir/main_multMatrix.cpp.i
+CMakeFiles/multMatrix.dir/serverMain.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/multMatrix.dir/serverMain.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/serverMain.cpp" > CMakeFiles/multMatrix.dir/serverMain.cpp.i
 
-CMakeFiles/multMatrix.dir/main_multMatrix.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/multMatrix.dir/main_multMatrix.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/main_multMatrix.cpp" -o CMakeFiles/multMatrix.dir/main_multMatrix.cpp.s
+CMakeFiles/multMatrix.dir/serverMain.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/multMatrix.dir/serverMain.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/serverMain.cpp" -o CMakeFiles/multMatrix.dir/serverMain.cpp.s
 
 CMakeFiles/multMatrix.dir/multmatrix.cpp.o: CMakeFiles/multMatrix.dir/flags.make
 CMakeFiles/multMatrix.dir/multmatrix.cpp.o: multmatrix.cpp
@@ -83,19 +83,79 @@ CMakeFiles/multMatrix.dir/multmatrix.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/multMatrix.dir/multmatrix.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/multmatrix.cpp" -o CMakeFiles/multMatrix.dir/multmatrix.cpp.s
 
+CMakeFiles/multMatrix.dir/multmatrix_imp.cpp.o: CMakeFiles/multMatrix.dir/flags.make
+CMakeFiles/multMatrix.dir/multmatrix_imp.cpp.o: multmatrix_imp.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/multMatrix.dir/multmatrix_imp.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/multMatrix.dir/multmatrix_imp.cpp.o -c "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/multmatrix_imp.cpp"
+
+CMakeFiles/multMatrix.dir/multmatrix_imp.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/multMatrix.dir/multmatrix_imp.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/multmatrix_imp.cpp" > CMakeFiles/multMatrix.dir/multmatrix_imp.cpp.i
+
+CMakeFiles/multMatrix.dir/multmatrix_imp.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/multMatrix.dir/multmatrix_imp.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/multmatrix_imp.cpp" -o CMakeFiles/multMatrix.dir/multmatrix_imp.cpp.s
+
+CMakeFiles/multMatrix.dir/utils.cpp.o: CMakeFiles/multMatrix.dir/flags.make
+CMakeFiles/multMatrix.dir/utils.cpp.o: utils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/multMatrix.dir/utils.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/multMatrix.dir/utils.cpp.o -c "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/utils.cpp"
+
+CMakeFiles/multMatrix.dir/utils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/multMatrix.dir/utils.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/utils.cpp" > CMakeFiles/multMatrix.dir/utils.cpp.i
+
+CMakeFiles/multMatrix.dir/utils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/multMatrix.dir/utils.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/utils.cpp" -o CMakeFiles/multMatrix.dir/utils.cpp.s
+
+CMakeFiles/multMatrix.dir/main_multMatrix.cpp.o: CMakeFiles/multMatrix.dir/flags.make
+CMakeFiles/multMatrix.dir/main_multMatrix.cpp.o: main_multMatrix.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/multMatrix.dir/main_multMatrix.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/multMatrix.dir/main_multMatrix.cpp.o -c "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/main_multMatrix.cpp"
+
+CMakeFiles/multMatrix.dir/main_multMatrix.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/multMatrix.dir/main_multMatrix.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/main_multMatrix.cpp" > CMakeFiles/multMatrix.dir/main_multMatrix.cpp.i
+
+CMakeFiles/multMatrix.dir/main_multMatrix.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/multMatrix.dir/main_multMatrix.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/main_multMatrix.cpp" -o CMakeFiles/multMatrix.dir/main_multMatrix.cpp.s
+
+CMakeFiles/multMatrix.dir/multmatrix_stub.cpp.o: CMakeFiles/multMatrix.dir/flags.make
+CMakeFiles/multMatrix.dir/multmatrix_stub.cpp.o: multmatrix_stub.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/multMatrix.dir/multmatrix_stub.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/multMatrix.dir/multmatrix_stub.cpp.o -c "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/multmatrix_stub.cpp"
+
+CMakeFiles/multMatrix.dir/multmatrix_stub.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/multMatrix.dir/multmatrix_stub.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/multmatrix_stub.cpp" > CMakeFiles/multMatrix.dir/multmatrix_stub.cpp.i
+
+CMakeFiles/multMatrix.dir/multmatrix_stub.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/multMatrix.dir/multmatrix_stub.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/multmatrix_stub.cpp" -o CMakeFiles/multMatrix.dir/multmatrix_stub.cpp.s
+
 # Object files for target multMatrix
 multMatrix_OBJECTS = \
+"CMakeFiles/multMatrix.dir/serverMain.cpp.o" \
+"CMakeFiles/multMatrix.dir/multmatrix.cpp.o" \
+"CMakeFiles/multMatrix.dir/multmatrix_imp.cpp.o" \
+"CMakeFiles/multMatrix.dir/utils.cpp.o" \
 "CMakeFiles/multMatrix.dir/main_multMatrix.cpp.o" \
-"CMakeFiles/multMatrix.dir/multmatrix.cpp.o"
+"CMakeFiles/multMatrix.dir/multmatrix_stub.cpp.o"
 
 # External object files for target multMatrix
 multMatrix_EXTERNAL_OBJECTS =
 
-multMatrix: CMakeFiles/multMatrix.dir/main_multMatrix.cpp.o
+multMatrix: CMakeFiles/multMatrix.dir/serverMain.cpp.o
 multMatrix: CMakeFiles/multMatrix.dir/multmatrix.cpp.o
+multMatrix: CMakeFiles/multMatrix.dir/multmatrix_imp.cpp.o
+multMatrix: CMakeFiles/multMatrix.dir/utils.cpp.o
+multMatrix: CMakeFiles/multMatrix.dir/main_multMatrix.cpp.o
+multMatrix: CMakeFiles/multMatrix.dir/multmatrix_stub.cpp.o
 multMatrix: CMakeFiles/multMatrix.dir/build.make
 multMatrix: CMakeFiles/multMatrix.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable multMatrix"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable multMatrix"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/multMatrix.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
