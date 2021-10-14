@@ -10,6 +10,8 @@
 FileManager::FileManager(string path)
 {
     this->dirPath=path;
+    
+    
     DIR *dir;
     struct dirent *ent;
     if ((dir = opendir(path.c_str())) != nullptr) {

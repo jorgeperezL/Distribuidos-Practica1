@@ -1,4 +1,4 @@
-# Install script for directory: /home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/fileManager
+# Install script for directory: /home/mike/Documentos/PrimerCuatri/sis_distri/Distribuidos-Practica1/fileManager
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/fileManager/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/mike/Documentos/PrimerCuatri/sis_distri/Distribuidos-Practica1/fileManager/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
