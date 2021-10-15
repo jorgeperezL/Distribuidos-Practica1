@@ -5,12 +5,6 @@ int main(int argc,char** argv)
 {
     filemanager_stub* fm=new filemanager_stub();
     
-   /* char* dataA=nullptr;
-    int fileLenA=0;
-    fm->readFile((char*)"prueba_1",dataA,fileLenA);
-    
-    return 0;*/
-    
     
     std::vector<std::string*>* vfiles=fm->listFiles();
     std::cout<<"Lista de ficheros en el directorio de prueba:\n"<<std::endl;
