@@ -5,11 +5,11 @@ int main(int argc,char** argv)
 {
     filemanager_stub* fm=new filemanager_stub();
     
-    char* dataA=nullptr;
+   /* char* dataA=nullptr;
     int fileLenA=0;
     fm->readFile((char*)"prueba_1",dataA,fileLenA);
     
-    return 0;
+    return 0;*/
     
     
     std::vector<std::string*>* vfiles=fm->listFiles();
@@ -30,5 +30,6 @@ int main(int argc,char** argv)
     std::cout<<"Liberando datos de fichero leído:\n";
     
     delete[] data;
+    delete fm;
     return 0;
 }

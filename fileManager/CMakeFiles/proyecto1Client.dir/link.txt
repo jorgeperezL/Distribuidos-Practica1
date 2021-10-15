@@ -1,1 +1,1 @@
-/usr/bin/c++    -rdynamic CMakeFiles/proyecto1Client.dir/main_fm.cpp.o CMakeFiles/proyecto1Client.dir/utils.cpp.o CMakeFiles/proyecto1Client.dir/filemanager_stub.cpp.o  -o proyecto1Client  -lpthread 
+/usr/bin/c++  -g  -rdynamic CMakeFiles/proyecto1Client.dir/main_fm.cpp.o CMakeFiles/proyecto1Client.dir/utils.cpp.o CMakeFiles/proyecto1Client.dir/filemanager_stub.cpp.o  -o proyecto1Client  -lpthread 

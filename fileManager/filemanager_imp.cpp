@@ -59,7 +59,8 @@ void filemanager_imp::atenderOperacion()
 				recvMSG(clientID,(void**)&nombre,&dataLen);
 				
 				//leer fichero
-				fm->readFile((char*)&nombre,fileData, fileLen);
+				std::cout<<"El nombre recibido es:"<<nombre<<"\n";
+				fm->readFile(nombre,fileData, fileLen);
 				
 			
 				//devolver datos fichero
@@ -108,10 +109,12 @@ void filemanager_imp::atenderOperacion()
 				for(int a=0;a<cantFicheros;a++) 
 				{
 					const char* nombre = list->at(a)->c_str();
-					sendMSG(clientID,(void*)&nombre,strlen(nombre)+1);
+					sendMSG(clientID,(void*)nombre,strlen(nombre)+1);
 				}
 				
 				fm->freeListedFiles(list);
+				
+				
 				
 				
 			

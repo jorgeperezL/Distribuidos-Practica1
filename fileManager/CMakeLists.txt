@@ -5,6 +5,12 @@ cmake_minimum_required (VERSION 2.8.11)
 #add_executable (fileManager main_fm.cpp filemanager.cpp filemanager.h)
 
 
+set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+
+
 project(proyecto1Server LANGUAGES CXX)
 add_executable(proyecto1Server 
 		 serverMain.cpp

@@ -33,9 +33,9 @@ void filemanager_stub::writeFile(char* fileName, char* data, int dataLength){
 	int operacion = OP_WRITEFILE;
 	
 	sendMSG(serverID,(void*) &operacion,sizeof(int)); //tipo operacion
-	sendMSG(serverID,(void*) fileName,sizeof(int)); //enviar nombre
+	sendMSG(serverID,(void*) fileName,strlen(fileName)+1); //enviar nombre
 	
-	sendMSG(serverID,(void*)&data,strlen(data)+1);  //enviar datos
+	sendMSG(serverID,(void*)data,dataLength);  //enviar datos
 	
 	
 }
@@ -50,9 +50,9 @@ void filemanager_stub::readFile(char* fileName, char* &data, int &dataLength){
 	int operacion = OP_READFILE;
 	
 	sendMSG(serverID,(void*) &operacion,sizeof(int)); //tipo operacion
-	sendMSG(serverID,(void*) fileName,sizeof(int)); //enviar nombre
+	sendMSG(serverID,(void*) fileName,strlen(fileName)+1); //enviar nombre
 	
-	recvMSG(serverID,(void**)data,(int*)&dataLength);  //recibe datos
+	recvMSG(serverID,(void**)&data,(int*)&dataLength);  //recibe datos
 	
 
 }
@@ -63,12 +63,17 @@ std::vector<std::string*>* filemanager_stub::listFiles() {
 	int operacion  = OP_LISTFILES;
 	int cantFicheros=0;
 	int tamNombre=0;
+	int dataLen = 0;
 	char* nombre= nullptr;
+	char* datosBuffer = nullptr;
 	
 	std::vector<std::string*>* list = new std::vector<std::string*>();
 	
 	sendMSG(serverID,(void*) &operacion, sizeof(int)); //tipo operacion
-	recvMSG(serverID,(void**)&cantFicheros,&tamNombre); //recibe numero archivos
+	recvMSG(serverID,(void**)&datosBuffer,&dataLen);
+	memcpy(&cantFicheros,datosBuffer, sizeof(int));
+	delete datosBuffer;
+
 	//TODO el cantFicheros, aca el error de punteros.
 	std::cout<<"El cant ficheros: "<<cantFicheros<<std::endl;
 	
