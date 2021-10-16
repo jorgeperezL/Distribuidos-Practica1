@@ -79,7 +79,7 @@ std::vector<std::string*>* filemanager_stub::listFiles() {
 	
 	for(int a=0;a<cantFicheros;a++) 
 	{
-		recvMSG(serverID,(void**)&nombre,&tamNombre);
+		recvMSG(serverID,(void**)&nombre,&tamNombre);  //recibe nombre fichero
 		list->push_back(new std::string(nombre));
 	}
 	
