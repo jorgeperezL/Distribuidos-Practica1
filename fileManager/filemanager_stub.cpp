@@ -70,7 +70,7 @@ std::vector<std::string*>* filemanager_stub::listFiles() {
 	std::vector<std::string*>* list = new std::vector<std::string*>();
 	
 	sendMSG(serverID,(void*) &operacion, sizeof(int)); //tipo operacion
-	recvMSG(serverID,(void**)&datosBuffer,&dataLen);
+	recvMSG(serverID,(void**)&datosBuffer,&dataLen);   //recibe cantFicheros
 	memcpy(&cantFicheros,datosBuffer, sizeof(int));
 	delete datosBuffer;
 
