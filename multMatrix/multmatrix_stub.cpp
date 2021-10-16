@@ -36,9 +36,11 @@ matrix_t * multmatrix_stub::readMatrix(const char* fileName){
 	
 	recvMSG(serverID,(void**)&datos,&dataLen);
 				
-	m->rows = atoi(datos);
-	m->cols = atoi(&datos[sizeof(int)]);
-	m->data = (int*)&datos[sizeof(int)*2];
+	memcpy(&m->rows,datos,sizeof(int));
+	memcpy(&m->cols,&datos[sizeof(int)],sizeof(int));
+	m->data = new int[sizeof(int)*(m->rows*m->cols)];
+	memcpy(m->data,(int*)&datos[sizeof(int)*2],sizeof(int)*(m->rows*m->cols));
+	//m->data = (int*)&datos[sizeof(int)*2];
 	
 	delete datos;
 				
@@ -78,9 +80,11 @@ matrix_t * multmatrix_stub::multMatrices(matrix_t* m1, matrix_t *m2){
 //recibir resultado
 	recvMSG(serverID,(void**)&datos,&dataLen);
 				
-	mres->rows = atoi(datos);
-	mres->cols = atoi(&datos[sizeof(int)]);
-	mres->data = (int*)&datos[sizeof(int)*2];		
+	memcpy(&mres->rows,datos,sizeof(int));
+	memcpy(&mres->cols,&datos[sizeof(int)],sizeof(int));
+	mres->data = new int[sizeof(int)*(mres->rows*mres->cols)];
+	memcpy(mres->data,(int*)&datos[sizeof(int)*2],sizeof(int)*(mres->rows*mres->cols));
+	//mres->data = (int*)&datos[sizeof(int)*2];		
 				
 	delete datos;
 	
@@ -127,9 +131,11 @@ matrix_t* multmatrix_stub::createIdentity(int rows, int cols){
 	//recibir resultado
 	recvMSG(serverID,(void**)&datos,&dataLen);
 				
-	mres->rows = atoi(datos);
-	mres->cols = atoi(&datos[sizeof(int)]);
-	mres->data = (int*)&datos[sizeof(int)*2];		
+	memcpy(&mres->rows,datos,sizeof(int));
+	memcpy(&mres->cols,&datos[sizeof(int)],sizeof(int));
+	mres->data = new int[sizeof(int)*(mres->rows*mres->cols)];
+	memcpy(mres->data,(int*)&datos[sizeof(int)*2],sizeof(int)*(mres->rows*mres->cols));
+	//mres->data = (int*)&datos[sizeof(int)*2];		
 				
 	delete datos;
 	
@@ -153,9 +159,12 @@ matrix_t * multmatrix_stub::createRandMatrix(int rows, int cols){
 	//recibir resultado
 	recvMSG(serverID,(void**)&datos,&dataLen);
 				
-	mres->rows = atoi(datos);
-	mres->cols = atoi(&datos[sizeof(int)]);
-	mres->data = (int*)&datos[sizeof(int)*2];		
+	memcpy(&mres->rows,datos,sizeof(int));
+	memcpy(&mres->cols,&datos[sizeof(int)],sizeof(int));
+				//memcpy(&datos[sizeof(int)*2],m->data,sizeof(int)*(m->rows*m->cols));
+	mres->data = new int[sizeof(int)*(mres->rows*mres->cols)];
+	memcpy(mres->data,(int*)&datos[sizeof(int)*2],sizeof(int)*(mres->rows*mres->cols));
+	//mres->data = (int*)&datos[sizeof(int)*2];		
 				
 	delete datos;
 	

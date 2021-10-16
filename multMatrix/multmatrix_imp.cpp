@@ -79,17 +79,21 @@ void multmatrix_imp::atenderOperacion()
 				
 				recvMSG(clientID,(void**)&datos,&dataLen);
 				
-				m1->rows = atoi(datos);
-				m1->cols = atoi(&datos[sizeof(int)]);
-				m1->data = (int*)&datos[sizeof(int)*2];		
+				memcpy(&m1->rows,datos,sizeof(int));
+				memcpy(&m1->cols,&datos[sizeof(int)],sizeof(int));
+				m1->data = new int[sizeof(int)*(m1->rows*m1->cols)];
+				memcpy(m1->data,(int*)&datos[sizeof(int)*2],sizeof(int)*(m1->rows*m1->cols));
+				//m1->data = (int*)&datos[sizeof(int)*2];		
 				
 				delete datos;
 				
 				recvMSG(clientID,(void**)&datos,&dataLen);
 				
-				m2->rows = atoi(datos);
-				m2->cols = atoi(&datos[sizeof(int)]);
-				m2->data = (int*)&datos[sizeof(int)*2];
+				memcpy(&m2->rows,datos,sizeof(int));
+				memcpy(&m2->cols,&datos[sizeof(int)],sizeof(int));
+				m2->data = new int[sizeof(int)*(m2->rows*m2->cols)];
+				memcpy(m2->data,(int*)&datos[sizeof(int)*2],sizeof(int)*(m2->rows*m2->cols));
+				//m2->data = (int*)&datos[sizeof(int)*2];
 				
 				delete datos;
 				
@@ -113,15 +117,19 @@ void multmatrix_imp::atenderOperacion()
 			case OP_WRITEMATRIX:
 			{
 				matrix_t *m = new matrix_t();
-				char* nombre=nullptr;
+				char* nombre=nullptr;				
+				
+				recvMSG(clientID,(void**)&nombre,&dataLen);
 				
 				recvMSG(clientID,(void**)&datos,&dataLen);
 				
-				m->rows = atoi(datos);
-				m->cols = atoi(&datos[sizeof(int)]);
-				m->data = (int*)&datos[sizeof(int)*2];
+				memcpy(&m->rows,datos,sizeof(int));
+				memcpy(&m->cols,&datos[sizeof(int)],sizeof(int));
+				m->data = new int[sizeof(int)*(m->rows*m->cols)];
+				memcpy(m->data,(int*)&datos[sizeof(int)*2],sizeof(int)*(m->rows*m->cols));
+				//m->data = (int*)&datos[sizeof(int)*2];
 						
-				recvMSG(clientID,(void**)&nombre,&dataLen);
+				
 		
 				mult->writeMatrix(m,nombre);
 				

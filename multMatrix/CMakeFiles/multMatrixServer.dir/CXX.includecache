@@ -6,26 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/multmatrix.cpp
-multmatrix.h
-/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/multmatrix.h
-multmatrix.h
-/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/multmatrix.h
-stdio.h
--
-stdlib.h
--
-iostream
--
-string
--
-cstring
--
-sys/types.h
--
-unistd.h
--
-
 /home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/multmatrix.h
 
 /home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/multmatrix_imp.cpp
@@ -45,22 +25,6 @@ utils.h
 /home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/utils.h
 multmatrix.h
 /home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/multmatrix.h
-
-/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/serverMain.cpp
-iostream
--
-stdio.h
--
-stdlib.h
--
-utils.h
-/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/utils.h
-multmatrix_imp.h
-/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/multmatrix_imp.h
-
-/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/utils.cpp
-utils.h
-/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/utils.h
 
 /home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/utils.h
 sys/types.h

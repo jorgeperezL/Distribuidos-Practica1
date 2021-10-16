@@ -3,9 +3,11 @@
 
 CMakeFiles/multMatrixClient.dir/main_multMatrix.cpp.o
  /home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/main_multMatrix.cpp
+ /home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/multmatrix.h
  /home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/multmatrix_stub.h
  /home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/utils.h
 CMakeFiles/multMatrixClient.dir/multmatrix_stub.cpp.o
+ /home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/multmatrix.h
  /home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/multmatrix_stub.cpp
  /home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/multmatrix_stub.h
  /home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/utils.h

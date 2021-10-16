@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "utils.h"
+#include "multmatrix.h"
 
 
 #define SERVER_IP "127.0.0.1"
@@ -17,13 +18,6 @@
 #define OP_WRITEMATRIX  			12
 #define OP_CREATEIDENTITY  	13
 #define OP_CREATERANDMATRIX  	14
-
-typedef struct matrix_t
-{
-    int rows;
-    int cols;
-    int* data;
-}matrix_t;
 
 class multmatrix_stub
 {
