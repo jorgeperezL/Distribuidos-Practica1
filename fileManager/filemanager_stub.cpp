@@ -75,7 +75,7 @@ std::vector<std::string*>* filemanager_stub::listFiles() {
 	delete datosBuffer;
 
 	//TODO el cantFicheros, aca el error de punteros.
-	std::cout<<"El cant ficheros: "<<cantFicheros<<std::endl;
+	std::cout<<"\nEl cant ficheros: "<<cantFicheros<<std::endl;
 	
 	for(int a=0;a<cantFicheros;a++) 
 	{
