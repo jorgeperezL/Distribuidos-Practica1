@@ -76,12 +76,12 @@ clean: CMakeFiles/multMatrixServer.dir/clean
 CMakeFiles/multMatrixClient.dir/all:
 	$(MAKE) -f CMakeFiles/multMatrixClient.dir/build.make CMakeFiles/multMatrixClient.dir/depend
 	$(MAKE) -f CMakeFiles/multMatrixClient.dir/build.make CMakeFiles/multMatrixClient.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/CMakeFiles" --progress-num=1,2,3,4 "Built target multMatrixClient"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/CMakeFiles" --progress-num=1,2,3,4,5,6 "Built target multMatrixClient"
 .PHONY : CMakeFiles/multMatrixClient.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/multMatrixClient.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/CMakeFiles" 4
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/CMakeFiles" 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/multMatrixClient.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/CMakeFiles" 0
 .PHONY : CMakeFiles/multMatrixClient.dir/rule
@@ -103,7 +103,7 @@ CMakeFiles/multMatrixClient.dir/clean:
 CMakeFiles/multMatrixServer.dir/all:
 	$(MAKE) -f CMakeFiles/multMatrixServer.dir/build.make CMakeFiles/multMatrixServer.dir/depend
 	$(MAKE) -f CMakeFiles/multMatrixServer.dir/build.make CMakeFiles/multMatrixServer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/CMakeFiles" --progress-num=5,6,7,8,9 "Built target multMatrixServer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/CMakeFiles" --progress-num=7,8,9,10,11 "Built target multMatrixServer"
 .PHONY : CMakeFiles/multMatrixServer.dir/all
 
 # Build rule for subdir invocation for target.

@@ -6,6 +6,7 @@
 #include <string.h>
 #include "utils.h"
 #include "multmatrix.h"
+#include "filemanager.h"
 
 
 #define SERVER_IP "127.0.0.1"

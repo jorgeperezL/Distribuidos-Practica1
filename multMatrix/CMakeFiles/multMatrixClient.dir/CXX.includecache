@@ -6,11 +6,35 @@
 
 #IncludeRegexTransform: 
 
-/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/multmatrix.h
+/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/filemanager.h
+iostream
+-
+stdio.h
+-
+stdlib.h
+-
+string
+-
+map
+-
+vector
+-
+dirent.h
+-
 
-/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/multmatrix_stub.cpp
+/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/main_multMatrix.cpp
+stdio.h
+-
+stdlib.h
+-
+iostream
+-
 multmatrix_stub.h
 /home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/multmatrix_stub.h
+utils.h
+/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/utils.h
+
+/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/multmatrix.h
 
 /home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/multmatrix_stub.h
 iostream
@@ -25,6 +49,8 @@ utils.h
 /home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/utils.h
 multmatrix.h
 /home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/multmatrix.h
+filemanager.h
+/home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/filemanager.h
 
 /home/jorge/Documentos/Programacion de sistemas distribuidos/Practica1/multMatrix/utils.h
 sys/types.h

@@ -136,6 +136,33 @@ multMatrixServer/fast:
 	$(MAKE) -f CMakeFiles/multMatrixServer.dir/build.make CMakeFiles/multMatrixServer.dir/build
 .PHONY : multMatrixServer/fast
 
+filemanager.o: filemanager.cpp.o
+
+.PHONY : filemanager.o
+
+# target to build an object file
+filemanager.cpp.o:
+	$(MAKE) -f CMakeFiles/multMatrixClient.dir/build.make CMakeFiles/multMatrixClient.dir/filemanager.cpp.o
+.PHONY : filemanager.cpp.o
+
+filemanager.i: filemanager.cpp.i
+
+.PHONY : filemanager.i
+
+# target to preprocess a source file
+filemanager.cpp.i:
+	$(MAKE) -f CMakeFiles/multMatrixClient.dir/build.make CMakeFiles/multMatrixClient.dir/filemanager.cpp.i
+.PHONY : filemanager.cpp.i
+
+filemanager.s: filemanager.cpp.s
+
+.PHONY : filemanager.s
+
+# target to generate assembly for a file
+filemanager.cpp.s:
+	$(MAKE) -f CMakeFiles/multMatrixClient.dir/build.make CMakeFiles/multMatrixClient.dir/filemanager.cpp.s
+.PHONY : filemanager.cpp.s
+
 main_multMatrix.o: main_multMatrix.cpp.o
 
 .PHONY : main_multMatrix.o
@@ -169,6 +196,7 @@ multmatrix.o: multmatrix.cpp.o
 
 # target to build an object file
 multmatrix.cpp.o:
+	$(MAKE) -f CMakeFiles/multMatrixClient.dir/build.make CMakeFiles/multMatrixClient.dir/multmatrix.cpp.o
 	$(MAKE) -f CMakeFiles/multMatrixServer.dir/build.make CMakeFiles/multMatrixServer.dir/multmatrix.cpp.o
 .PHONY : multmatrix.cpp.o
 
@@ -178,6 +206,7 @@ multmatrix.i: multmatrix.cpp.i
 
 # target to preprocess a source file
 multmatrix.cpp.i:
+	$(MAKE) -f CMakeFiles/multMatrixClient.dir/build.make CMakeFiles/multMatrixClient.dir/multmatrix.cpp.i
 	$(MAKE) -f CMakeFiles/multMatrixServer.dir/build.make CMakeFiles/multMatrixServer.dir/multmatrix.cpp.i
 .PHONY : multmatrix.cpp.i
 
@@ -187,6 +216,7 @@ multmatrix.s: multmatrix.cpp.s
 
 # target to generate assembly for a file
 multmatrix.cpp.s:
+	$(MAKE) -f CMakeFiles/multMatrixClient.dir/build.make CMakeFiles/multMatrixClient.dir/multmatrix.cpp.s
 	$(MAKE) -f CMakeFiles/multMatrixServer.dir/build.make CMakeFiles/multMatrixServer.dir/multmatrix.cpp.s
 .PHONY : multmatrix.cpp.s
 
@@ -311,6 +341,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... multMatrixClient"
 	@echo "... multMatrixServer"
+	@echo "... filemanager.o"
+	@echo "... filemanager.i"
+	@echo "... filemanager.s"
 	@echo "... main_multMatrix.o"
 	@echo "... main_multMatrix.i"
 	@echo "... main_multMatrix.s"

@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/multMatrixClient.dir/filemanager.cpp.o"
   "CMakeFiles/multMatrixClient.dir/main_multMatrix.cpp.o"
+  "CMakeFiles/multMatrixClient.dir/multmatrix.cpp.o"
   "CMakeFiles/multMatrixClient.dir/multmatrix_stub.cpp.o"
   "CMakeFiles/multMatrixClient.dir/utils.cpp.o"
   "multMatrixClient"
