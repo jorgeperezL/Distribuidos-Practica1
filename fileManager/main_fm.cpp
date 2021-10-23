@@ -1,5 +1,6 @@
 #include <iostream>
 #include "filemanager_stub.h"
+#include <stdio.h>
 
 int main(int argc,char** argv)
 {
@@ -35,6 +36,12 @@ int main(int argc,char** argv)
     std::cout<<"Liberando datos de fichero leído:\n\n";
 	
 	
+	    
+    delete[] data;
+    delete fm;
+    return 0;
+}
+
 	
 	
 	
@@ -49,11 +56,7 @@ int main(int argc,char** argv)
 	
 	
 	
-	
-	
-	#include <iostream>
-#include "filemanager_stub.h"
-#include <stdio.h>
+
 
 int main(int argc,char** argv)
 {
@@ -205,8 +208,3 @@ int main(int argc,char** argv)
 }   
 
     
-    
-    delete[] data;
-    delete fm;
-    return 0;
-}
